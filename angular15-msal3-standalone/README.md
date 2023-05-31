@@ -1,23 +1,17 @@
 # Angular 15 MSAL Angular v3 Sample
 
-This developer sample is used to demonstrate how to use `@azure/msal-angular`.
+This was cloned from the official [MSAL v3 sample app](https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/samples/msal-angular-v3-samples/angular15-sample-app) and edited to be compatible with an Azure AD B2C configuration. Also it was changed to not rely on NG-modules anymore. The client id used is the one used by Microsoft in its official [MSAL v2 B2C sample](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/samples/msal-angular-v2-samples/angular-b2c-sample-app/src/environments/environment.dev.ts), so you can readily sign in with one of your socials.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.4.
+This is a standalone app and not module-based.
 
-## How to run the sample
+# Instructions
 
-### Pre-requisites
-- Ensure [all pre-requisites](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-angular/README.md) have been completed to run msal-angular.
+This sample uses the alpha 2 of MSAL V3.
 
-### Configure the application
-- Open `./src/app/app.modules.ts` in an editor.
-- Replace client id with the Application (client) ID from the portal registration, or use the currently configured lab registration. 
-  - Optionally, you may replace any of the other parameters, or you can remove them and use the default values.
+* Install dependencies: `npm install`
 
-### Running the sample
-- In a command prompt, run `npm start`.
-- Navigate to [http://localhost:4200](http://localhost:4200)
-- In the web page, click on the "Login" button. The app will automatically reload if you change any of the source files.
+* Run app: `ng s`
 
-## Additional notes
-- The default interaction type for the sample is redirects. The sample can be configured to use redirects by changing the `interactionType` in `app.module.ts` to `InteractionType.Popup`. 
+* On http://localhost:4200 sign in either with the Popup method (REDIRECT NOT WORKING 😕)
+
+* Profile page (MSAL-guarded) displays account info
